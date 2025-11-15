@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#001B44" />
+  <title>Certificate Verification · Sistema GOBES·eIDAS</title>
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- Lottie-player library -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      font-family: "Helvetica Neue", sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    .lottie-wrapper {
+      width: 100%;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    lottie-player {
+      width: 100%;
+      height: auto;
+    }
+
+    .status-text {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #333;
+      font-weight: 500;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="lottie-wrapper">
+    <lottie-player
+      src="./assets/C_OK.lottie"
+      background="transparent"
+      speed="1"
+      autoplay
+      loop
+    ></lottie-player>
+  </div>
+
+  <div class="status-text">
+    Verificando certificado... Por favor, espere.
+  </div>
+
+</body>
+</html>
