@@ -1,114 +1,59 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Acceso · Sistema GOBES‑eIDAS</title>
-
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: "Times New Roman", serif;
-        background-color: #0A2342; /* Marineblå */
-        color: white;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-    }
-
-    header {
-        text-align: center;
-        padding: 22px 10px;
-        font-size: 1rem;
-        letter-spacing: 0.5px;
-        border-bottom: 1px solid rgba(255,255,255,0.15);
-    }
-
-    .container {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 15px;
-        text-align: center;
-    }
-
-    h1 {
-        font-size: 1.4rem;
-        margin-bottom: 12px;
-    }
-    p {
-        font-size: 1rem;
-        opacity: 0.95;
-        margin-bottom: 22px;
-    }
-
-    input {
-        padding: 10px;
-        font-size: 1rem;
-        border-radius: 6px;
-        border: none;
-        width: 80%;
-        max-width: 300px;
-        text-align: center;
-    }
-
-    button {
-        margin-top: 15px;
-        padding: 10px 20px;
-        font-size: 1rem;
-        border: none;
-        border-radius: 6px;
-        background-color: #D4AF37;
-        color: black;
-        cursor: pointer;
-        font-weight: bold;
-    }
-
-    .animation-box {
-        margin-top: 25px;
-        width: 180px;
-        max-width: 60%;
-    }
-
-    footer {
-        text-align: center;
-        padding: 18px;
-        font-size: 0.9rem;
-        opacity: 0.8;
-        border-top: 1px solid rgba(255,255,255,0.12);
-    }
-</style>
-
-<script src="assets/validar.js"></script>
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Sistema GOBES · Layer A – Access Gateway">
+  <title>GOBES-eIDAS · Verificación</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
 
-<header>
-Clínica Clara del Rey · Madrid · ES  
-<br>SISTEMA GOB·ES · FNMT Firma · Cl@ve · Autofirma · eIDAS
-</header>
+  <header>
+    <h1>🔒 Sistema GOBES-eIDAS · Verificación inicial</h1>
+    <p class="subtitle">Access Gateway – Layer A</p>
+  </header>
 
-<div class="container">
-    <h1>ACCESO AL DOCUMENTO</h1>
-    <p>Introduzca su código de acceso para abrir el certificado.</p>
+  <main>
+    <section class="access-container">
+      <label for="access-code">Enter Access Code:</label>
+      <input type="password" id="access-code" name="access-code" placeholder="Código de acceso" />
+      <button onclick="validateCode()">Validate</button>
+    </section>
 
-    <input type="password" id="accesscode" placeholder="Código requerido">
-    <br>
-    <button onclick="validarAcceso()">Continuar</button>
+    <section class="animation">
+      <lottie-player
+        src="assets/Venterkode.lottie"
+        background="transparent"
+        speed="1"
+        style="width: 320px; height: 320px; margin: auto;"
+        loop
+        autoplay>
+      </lottie-player>
+    </section>
 
-    <div class="animation-box">
-        <lottie-player src="assets/Venterkode.lottie" background="transparent" speed="1" loop autoplay></lottie-player>
-    </div>
-</div>
+    <section class="legal-footer">
+      <p class="realtime-banner">
+        Conexión en tiempo real verificada – <strong>© Gobierno de España · Ministerio de Sanidad · Sistema GOBES-eIDAS</strong>
+      </p>
+    </section>
+  </main>
 
-<footer>
-Conexión en tiempo real verificada · © Sistema GOBES‑eIDAS · Gobierno de España
-</footer>
+  <footer>
+    <p>© Gobierno de España · Ministerio de Sanidad · Sistema GOBES-eIDAS</p>
+  </footer>
+
+  <script>
+    function validateCode() {
+      const code = document.getElementById("access-code").value;
+      if (code === "S2-0421") {
+        window.location.href = "LAYER-B.html";
+      } else {
+        alert("Código incorrecto. Inténtelo de nuevo.");
+      }
+    }
+  </script>
 
 </body>
 </html>
