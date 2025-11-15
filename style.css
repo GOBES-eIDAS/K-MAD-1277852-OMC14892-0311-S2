@@ -1,0 +1,92 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', serif;
+  background-color: #fefefe;
+  color: #001b44;
+  line-height: 1.6;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.banner-image {
+  width: 100%;
+  max-height: 150px;
+  object-fit: contain;
+  margin-bottom: 2rem;
+}
+
+.validation-section {
+  padding: 2rem;
+  background-color: #ffffff;
+  border: 1px solid #d4af37;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: #001b44;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.input-box {
+  margin-top: 2rem;
+}
+
+.input-box label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.input-box input {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  width: 80%;
+  max-width: 400px;
+}
+
+.input-box button {
+  display: block;
+  margin: 1.5rem auto 0;
+  padding: 0.8rem 2rem;
+  background-color: #001b44;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.input-box button:hover {
+  background-color: #003366;
+}
+
+.footer {
+  margin-top: 3rem;
+  font-size: 0.85rem;
+  color: #888;
+}
