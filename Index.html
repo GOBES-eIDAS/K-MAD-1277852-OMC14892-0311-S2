@@ -3,57 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Sistema GOBES · Layer A – Access Gateway">
-  <title>GOBES-eIDAS · Verificación</title>
-  <link rel="stylesheet" href="assets/style.css" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>Certificate Verification · GOBES·eIDAS</title>
+  <link rel="stylesheet" href="style.css" />
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
 
-  <header>
-    <h1>🔒 Sistema GOBES-eIDAS · Verificación inicial</h1>
-    <p class="subtitle">Access Gateway – Layer A</p>
-  </header>
+  <main class="container">
 
-  <main>
-    <section class="access-container">
-      <label for="access-code">Enter Access Code:</label>
-      <input type="password" id="access-code" name="access-code" placeholder="Código de acceso" />
-      <button onclick="validateCode()">Validate</button>
+    <section class="banner">
+      <img src="assets/GOBES-header.svg" alt="Gobierno de España · eIDAS" class="banner-image"/>
     </section>
 
-    <section class="animation">
-      <lottie-player
-        src="assets/Venterkode.lottie"
-        background="transparent"
-        speed="1"
-        style="width: 320px; height: 320px; margin: auto;"
-        loop
-        autoplay>
-      </lottie-player>
+    <section class="validation-section">
+      <h1>Cross-Border Certificate</h1>
+      <h2>Medico–Legal Validation System</h2>
+
+      <div class="animation-container">
+        <lottie-player
+          src="assets/Venterkode.lottie"
+          background="transparent"
+          speed="1"
+          style="width: 320px; height: 320px; margin: auto"
+          loop
+          autoplay
+        ></lottie-player>
+      </div>
+
+      <div class="input-box">
+        <label for="code">Enter certificate access code</label>
+        <input type="text" id="code" name="code" placeholder="••••••••••••••••••••" maxlength="20"/>
+        <button id="validate-btn">Validate</button>
+      </div>
+
     </section>
 
-    <section class="legal-footer">
-      <p class="realtime-banner">
-        Conexión en tiempo real verificada – <strong>© Gobierno de España · Ministerio de Sanidad · Sistema GOBES-eIDAS</strong>
-      </p>
-    </section>
+    <footer class="footer">
+      <p>System GOBES·eIDAS · Spain / European Union · Ministerio de Sanidad y Justicia</p>
+    </footer>
+
   </main>
-
-  <footer>
-    <p>© Gobierno de España · Ministerio de Sanidad · Sistema GOBES-eIDAS</p>
-  </footer>
-
-  <script>
-    function validateCode() {
-      const code = document.getElementById("access-code").value;
-      if (code === "S2-0421") {
-        window.location.href = "LAYER-B.html";
-      } else {
-        alert("Código incorrecto. Inténtelo de nuevo.");
-      }
-    }
-  </script>
 
 </body>
 </html>
