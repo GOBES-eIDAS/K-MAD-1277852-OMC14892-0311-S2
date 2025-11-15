@@ -1,69 +1,70 @@
-CERTIFICADO · K-MAD-1277852-OMC14892-0311-S2
-
-Repositorio oficial para la validación estructurada del Certificado Médico–Legal Transfronterizo.
-
----
-
-## 📄 Descripción
-
-Este repositorio contiene la estructura técnica, visual y criptográfica del certificado clínico–forense emitido en el marco del Reglamento (UE) 2011/24 y conforme al sistema GOB·ES · eIDAS.  
-Incluye:
-
-- Validación visual escalonada en 3 capas (Layers A, B y C)
-- Animaciones .lottie y .gif como elementos visuales de desbloqueo
-- Control de acceso progresivo con JavaScript (no accesible vía URL directa)
-- Certificado PDF con metadatos embebidos
-- JSON de validación en tiempo real
-- Sistema de despliegue offline/online vía GitHub Pages
+# CERTIFICADO MÉDICO-LEGAL TRANSFRONTERIZO  
+**Repositorio oficial: K-MAD-1277852-OMC14892-0311-S2**  
+**Usuario: GOBES-eIDAS**
 
 ---
 
-## 🗂️ Estructura del proyecto
+## Descripción
 
-```
+Repositorio validado de distribución clínica–jurídica para certificados médico-legales transfronterizos (España / Unión Europea), conforme a los estándares de:
+
+- Reglamento (UE) n.º 2011/24
+- eIDAS (Reglamento UE 910/2014)
+- FNMT · Cl@ve · @firma · Autofirma
+- Lex Artis Médica · Ley 41/2002 · Ley 44/2003
+- ICD‑10 / ICD‑11 / DSM‑5 · ATC · CIE
+
+---
+
+## Estructura del Repositorio
 /
-├── index.html                  # Layer A (Página de acceso)
-├── layer-b.html               # Layer B (Capa intermedia protegida)
-├── layer-c.html               # Layer C (Certificado final)
-├── assets/                    # Archivos multimedia y certificados
-│   ├── unlocked.lottie
-│   ├── loading-circle.gif
-│   ├── certificado.pdf
-│   ├── validated.json
-│   └── ...
-├── css/                       # Estilos (si aplica)
-├── js/                        # Scripts (si aplica)
-└── README.md
-```
+├── index.html                 ← Landing page con acceso mediante código
+├── layer-b.html              ← Validación intermedia
+├── layer-c.html              ← Certificado completo (restringido)
+├── README.md                 ← Este archivo
+├── assets/                   ← Animaciones, imágenes y documentos
+│   ├── unlocked.lottie       ← Animación de validación
+│   ├── LoadTrecirklet.gif    ← Carga visual
+│   ├── certificado.pdf       ← Documento PDF (capa protegida)
+│   └── data.json             ← Metadata integrada (hash, firma, etc.)
+├── css/
+│   └── style.css             ← Estilos para todas las páginas
+├── js/
+│   └── script.js             ← Lógica de autenticación y bloqueo
+---
+
+## Seguridad
+
+- **Códigos de acceso cifrados** requeridos para acceder a cada capa.
+- **Validación QR** y firma digital (`PKCS#7`, `PAdES`, `X.509`)
+- **Redirección automática**: No es posible acceder directamente a ninguna capa sin pasar por la anterior.
 
 ---
 
-## 🛡️ Seguridad y flujo de acceso
+## Assets
 
-- 🔐 Los usuarios deben pasar por Layer A para acceder a B y C.
-- 🚫 Accesos directos vía URL están bloqueados con redirección automática.
-- 📲 Autenticación ligera vía `sessionStorage` con control secuencial.
-- 🔄 Animaciones `.lottie` indican validación / desbloqueo.
+Archivos `.lottie`, `.gif`, `.json`, `.pdf`, `.png`, `.jpg` y fuentes oficiales para uso en frontend y validación offline (OpenCV, iPhone, Android, print, etc.).
 
 ---
 
-## 📦 Assets
+## Deploy
 
-Todos los archivos `.lottie`, `.json`, `.pdf`, `.jpg` y `.gif` se encuentran en la carpeta `/assets/`, y son requeridos para la validación visual y funcional del certificado.
-
----
-
-## 🚀 Deploy
-
-- **Online:** GitHub Pages (`https://GOBES-eIDAS.github.io/K-MAD-1277852-OMC14892-0311-S2/`)
-- **Offline:** Validación offline a través de QR embebido, JSON, XML y PDF/A-2b con hash SHA-256
+- **Versión online**: GitHub Pages
+- **Versión offline**: Verificación embebida con QR, JSON, XML, y certificado con metadata (SHA-256, firma, código de documento).
 
 ---
 
-## ⚖️ Jurisdicción
+## Estado
 
-Este certificado está emitido bajo la jurisdicción del Reino de España y es válido en toda la Unión Europea conforme a:
+🟢 **Verificado – Original – Válido – Auténtico**  
+🔐 Acceso restringido mediante doble autenticación (multicapa)
 
-- Reglamento (UE) Nº 2011/24
-- Reglamento eIDAS 910/2014
-- Ley 44/2003 de Ordenación de Profesiones Sanitarias (España)
+---
+
+## Clínica responsable
+
+**Clínica Clara del Rey**  
+Madrid · España · Jurisdicción UE  
+Sistema GOB·ES · eIDAS
+
+---
