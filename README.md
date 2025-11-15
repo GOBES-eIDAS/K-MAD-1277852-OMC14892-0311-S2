@@ -1,70 +1,53 @@
-# CERTIFICADO MÉDICO-LEGAL TRANSFRONTERIZO  
-**Repositorio oficial: K-MAD-1277852-OMC14892-0311-S2**  
-**Usuario: GOBES-eIDAS**
+# CERTIFICADO MÉDICO-LEGAL · SISTEMA GOBES-eIDAS  
+**Document ID:** K-MAD-1277852-OMC14892-0311-S2  
+**Type:** Cross-Border Medico–Legal Certificate (Spain / EU)  
+**Version:** FINAL v.1.0  
+**Format:** PDF/A-2b · HTML5 · SHA-256 · eIDAS / EU Regulation 910/2014  
+**Validation System:** Sistema GOBES · Gobierno de España · Ministerio de Sanidad  
+**Languages:** Spanish / English  
+**License:** Medico-legal authorization under Spanish Law 44/2003 and Real Decreto 1093/2010  
+**Issued by:** Dr. Alfonso Chinchilla Moreno · ICOMEM Nº 14.892 · MEC Q286962  
 
 ---
 
-## Descripción
+## 🔐 Access Control
 
-Repositorio validado de distribución clínica–jurídica para certificados médico-legales transfronterizos (España / Unión Europea), conforme a los estándares de:
-
-- Reglamento (UE) n.º 2011/24
-- eIDAS (Reglamento UE 910/2014)
-- FNMT · Cl@ve · @firma · Autofirma
-- Lex Artis Médica · Ley 41/2002 · Ley 44/2003
-- ICD‑10 / ICD‑11 / DSM‑5 · ATC · CIE
+This certificate is protected by **multi-layer validation**.  
+You must pass the **initial gate (Layer A)** using a personal verification code.  
+Direct access to Layer B or Layer C is **disabled** unless verified via Layer A.
 
 ---
 
-## Estructura del Repositorio
-/
-├── index.html                 ← Landing page con acceso mediante código
-├── layer-b.html              ← Validación intermedia
-├── layer-c.html              ← Certificado completo (restringido)
-├── README.md                 ← Este archivo
-├── assets/                   ← Animaciones, imágenes y documentos
-│   ├── unlocked.lottie       ← Animación de validación
-│   ├── LoadTrecirklet.gif    ← Carga visual
-│   ├── certificado.pdf       ← Documento PDF (capa protegida)
-│   └── data.json             ← Metadata integrada (hash, firma, etc.)
-├── css/
-│   └── style.css             ← Estilos para todas las páginas
-├── js/
-│   └── script.js             ← Lógica de autenticación y bloqueo
+## 📁 Structure
+/K-MAD-1277852-OMC14892-0311-S2/
+├── index.html              # Main entry point (Layer A)
+├── LAYER-B.html            # Clinical and legal information (restricted)
+├── validate.json           # Embedded QR metadata
+├── README.md               # This file
+└── assets/
+├── style.css
+├── Venterkode.lottie
+├── unlocked.lottie
+└── Seal_ClaraDelRey_GOBES-España_v3.png
 ---
 
-## Seguridad
+## 📜 Legal & Regulatory Notes
 
-- **Códigos de acceso cifrados** requeridos para acceder a cada capa.
-- **Validación QR** y firma digital (`PKCS#7`, `PAdES`, `X.509`)
-- **Redirección automática**: No es posible acceder directamente a ninguna capa sin pasar por la anterior.
-
----
-
-## Assets
-
-Archivos `.lottie`, `.gif`, `.json`, `.pdf`, `.png`, `.jpg` y fuentes oficiales para uso en frontend y validación offline (OpenCV, iPhone, Android, print, etc.).
+- This certificate is protected under **Spanish and EU jurisdiction**.
+- It complies with:  
+  - 🇪🇸 *Ley 44/2003 de Ordenación de las Profesiones Sanitarias*  
+  - 🇪🇺 *Reglamento (UE) nº 910/2014 (eIDAS)*  
+  - 🇪🇺 *Directiva 2011/24/UE sobre la asistencia sanitaria transfronteriza*
+- Any unauthorized access, use, or distribution is a legal violation.
 
 ---
 
-## Deploy
+## 📌 Warning
 
-- **Versión online**: GitHub Pages
-- **Versión offline**: Verificación embebida con QR, JSON, XML, y certificado con metadata (SHA-256, firma, código de documento).
-
----
-
-## Estado
-
-🟢 **Verificado – Original – Válido – Auténtico**  
-🔐 Acceso restringido mediante doble autenticación (multicapa)
+**Do not bypass Layer A.**  
+Every access must be validated through the secure gate with cryptographic timestamp.  
+All events are logged.
 
 ---
 
-## Clínica responsable
-
-**Clínica Clara del Rey**  
-Madrid · España · Jurisdicción UE  
-Sistema GOB·ES · eIDAS
-
----
+© Gobierno de España · Ministerio de Sanidad · Sistema GOBES-eIDAS  
