@@ -1,98 +1,69 @@
-# K-MAD-1277852-OMC14892-0311-S2  
-**CERTIFICADO · Cross‑Border Medico‑Legal Certificate Validation System**
+CERTIFICADO · K-MAD-1277852-OMC14892-0311-S2
 
-This repository hosts the official validation system for the medico‑legal certificate identified as **K‑MAD‑1277852‑OMC14892‑0311‑S2**.  
-It enables controlled access, secure verification, and full structural inspection of the document’s authenticity, jurisdictional compliance, and medico‑legal integrity.
-
-The system is structured into three interactive layers, each reflecting a key stage in the validation and verification process of international clinical–legal documentation.
+Repositorio oficial para la validación estructurada del Certificado Médico–Legal Transfronterizo.
 
 ---
 
-## 1. System Structure  
+## 📄 Descripción
 
-### ▸ Validation Entry  
-The process begins with a secure authentication interface triggered automatically when accessing the system via QR code or direct link. Access requires a verification code provided to authorised parties.
+Este repositorio contiene la estructura técnica, visual y criptográfica del certificado clínico–forense emitido en el marco del Reglamento (UE) 2011/24 y conforme al sistema GOB·ES · eIDAS.  
+Incluye:
 
-### ▸ Layer A — Language and Access Parameters  
-Initial system layer responsible for language selection, jurisdictional profile loading, and pre‑validation of document origin parameters.
-
-### ▸ Layer B — Metadata and Integrity Validation  
-Performs internal logic verification, cryptographic integrity checks (e.g. SHA‑256), conformity with jurisdictional issuance standards, and validation of embedded identifiers.
-
-### ▸ Layer C — Certificate Finalisation and Issuance Confirmation  
-Displays the verified structure, certificate metadata, issuing authority credentials, and enables authorised download of the certified document in final format.
+- Validación visual escalonada en 3 capas (Layers A, B y C)
+- Animaciones .lottie y .gif como elementos visuales de desbloqueo
+- Control de acceso progresivo con JavaScript (no accesible vía URL directa)
+- Certificado PDF con metadatos embebidos
+- JSON de validación en tiempo real
+- Sistema de despliegue offline/online vía GitHub Pages
 
 ---
 
-## 2. Core Functionalities  
+## 🗂️ Estructura del proyecto
 
-- Access control and authentication  
-- Jurisdictional structure rendering (Spain / EU)  
-- Verification of digital fingerprints (SHA‑256)  
-- Inspection of official document identifiers  
-- Real‑time rendering of certificate layout and metadata  
-- Document access upon validation success  
-
-No operational component is simulated or placeholder‑based in the presentation; all elements reflect the structural reality of certificate validation.
-
----
-
-## 3. Directory Structure
-K-MAD-1277852-OMC14892-0311-S2/
-│
-├── index.html                  ← Entry point (validation gate)
-├── CERTIFICATE/
-│   ├── index.html              ← Language selection (Layer A)
-│   ├── validate.html           ← Validation logic interface (Layer B)
-│   ├── certificate.html        ← Final certificate metadata (Layer C)
-│   ├── full_document.html      ← Official document view
-│   ├── document.pdf            ← Certified medico‑legal PDF/A‑2b
-│   └── assets/
-│       ├── qr/
-│       ├── css/
-│       ├── js/
-│       ├── logos/
-│       └── lottie/
-│
+```
+/
+├── index.html                  # Layer A (Página de acceso)
+├── layer-b.html               # Layer B (Capa intermedia protegida)
+├── layer-c.html               # Layer C (Certificado final)
+├── assets/                    # Archivos multimedia y certificados
+│   ├── unlocked.lottie
+│   ├── loading-circle.gif
+│   ├── certificado.pdf
+│   ├── validated.json
+│   └── ...
+├── css/                       # Estilos (si aplica)
+├── js/                        # Scripts (si aplica)
 └── README.md
----
-
-## 4. Validation Specifications  
-
-- **Document ID:** K‑MAD‑1277852‑OMC14892‑0311‑S2  
-- **Document No.:** 0421  
-- **Issued under:** ICOMEM Nº 14892 · MEC Nº Q286962  
-- **Cryptographic hash (SHA‑256):**  
-  `82d36b0f0fd1e0f2c88f3deb502c20e2b54cd4f24b317405e593d36e0423e566`  
-- **PDF Format:** ISO 19005‑2 (PDF/A‑2b)  
-- **Validation Chain:** eIDAS · FNMT · Cl@ve · Autofirma  
-
-All validation logic is embedded and presented as part of the document's secure lifecycle.
+```
 
 ---
 
-## 5. Compliance Frameworks  
+## 🛡️ Seguridad y flujo de acceso
 
-This system is aligned with:
-
-- **Regulation (EU) 2011/24** — Cross-border healthcare  
-- **eIDAS Regulation (EU) 910/2014** — Digital identity & trust  
-- **Ley 44/2003 (España)** — Ordenación de las profesiones sanitarias  
-- **ISO/IEC 32000‑2** — PDF/A‑2 standard for long‑term archiving  
-- **PKCS#7 / PAdES** — Document signing and authentication  
+- 🔐 Los usuarios deben pasar por Layer A para acceder a B y C.
+- 🚫 Accesos directos vía URL están bloqueados con redirección automática.
+- 📲 Autenticación ligera vía `sessionStorage` con control secuencial.
+- 🔄 Animaciones `.lottie` indican validación / desbloqueo.
 
 ---
 
-## 6. Access & Maintenance  
+## 📦 Assets
 
-- Compatible with all modern mobile and desktop browsers  
-- Designed for secure display on iPhone/iPad (Safari, Chrome)  
-- Document and logic updates managed directly within the repository  
-- No third‑party dependencies or external service calls required  
+Todos los archivos `.lottie`, `.json`, `.pdf`, `.jpg` y `.gif` se encuentran en la carpeta `/assets/`, y son requeridos para la validación visual y funcional del certificado.
 
 ---
 
-## Notice  
-Access credentials are privately distributed.  
-This system is not intended for public access without authorisation.  
-The validation flow reflects the real operational structure of medico‑legal document control.
+## 🚀 Deploy
+
+- **Online:** GitHub Pages (`https://GOBES-eIDAS.github.io/K-MAD-1277852-OMC14892-0311-S2/`)
+- **Offline:** Validación offline a través de QR embebido, JSON, XML y PDF/A-2b con hash SHA-256
+
+---
+
+## ⚖️ Jurisdicción
+
+Este certificado está emitido bajo la jurisdicción del Reino de España y es válido en toda la Unión Europea conforme a:
+
+- Reglamento (UE) Nº 2011/24
+- Reglamento eIDAS 910/2014
+- Ley 44/2003 de Ordenación de Profesiones Sanitarias (España)
