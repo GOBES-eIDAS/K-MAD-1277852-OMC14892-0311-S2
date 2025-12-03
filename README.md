@@ -1,53 +1,49 @@
-# CERTIFICADO MÉDICO-LEGAL · SISTEMA GOBES-eIDAS  
-**Document ID:** K-MAD-1277852-OMC14892-0311-S2  
-**Type:** Cross-Border Medico–Legal Certificate (Spain / EU)  
-**Version:** FINAL v.1.0  
-**Format:** PDF/A-2b · HTML5 · SHA-256 · eIDAS / EU Regulation 910/2014  
-**Validation System:** Sistema GOBES · Gobierno de España · Ministerio de Sanidad  
-**Languages:** Spanish / English  
-**License:** Medico-legal authorization under Spanish Law 44/2003 and Real Decreto 1093/2010  
-**Issued by:** Dr. Alfonso Chinchilla Moreno · ICOMEM Nº 14.892 · MEC Q286962  
+# Anexo Clínico – Registro Diagnóstico y Tratamientos  
+**Sistema de presentación GOBES•eIDAS — Compatible con estándares europeos**  
+Documento auxiliar · No sustituye el Certificado Médico–Legal Transfronterizo oficial.
 
 ---
 
-## 🔐 Access Control
+## 📑 Naturaleza del anexo
+Este repositorio contiene **el anexo clínico y diagnóstico ampliado** del expediente médico–legal transfronterizo.  
+Su función es servir como **documento técnico de apoyo**, proporcionando:
 
-This certificate is protected by **multi-layer validation**.  
-You must pass the **initial gate (Layer A)** using a personal verification code.  
-Direct access to Layer B or Layer C is **disabled** unless verified via Layer A.
+- Diagnósticos completos con codificación ICD-10, ICD-11 y DSM-5  
+- Tratamientos actuales y previos  
+- Advertencias farmacológicas y neurofisiológicas  
+- Registro ampliado neuro–psicológico y traumático  
+- Estructura presentacional diseñada bajo el perfil **GOBES•eIDAS**
 
----
-
-## 📁 Structure
-/K-MAD-1277852-OMC14892-0311-S2/
-├── index.html              # Main entry point (Layer A)
-├── LAYER-B.html            # Clinical and legal information (restricted)
-├── validate.json           # Embedded QR metadata
-├── README.md               # This file
-└── assets/
-├── style.css
-├── Venterkode.lottie
-├── unlocked.lottie
-└── Seal_ClaraDelRey_GOBES-España_v3.png
----
-
-## 📜 Legal & Regulatory Notes
-
-- This certificate is protected under **Spanish and EU jurisdiction**.
-- It complies with:  
-  - 🇪🇸 *Ley 44/2003 de Ordenación de las Profesiones Sanitarias*  
-  - 🇪🇺 *Reglamento (UE) nº 910/2014 (eIDAS)*  
-  - 🇪🇺 *Directiva 2011/24/UE sobre la asistencia sanitaria transfronteriza*
-- Any unauthorized access, use, or distribution is a legal violation.
+El contenido **no constituye certificación electrónica**, no actúa como sistema eIDAS oficial y no reemplaza el documento principal.
 
 ---
 
-## 📌 Warning
+## 🔐 Identidad visual y estructura
+El documento utiliza:
 
-**Do not bypass Layer A.**  
-Every access must be validated through the secure gate with cryptographic timestamp.  
-All events are logged.
+- Loader GIF inicial (HTML5)  
+- Icono miniatura **eIDAS compliant** (PNG transparente · esquina superior derecha)  
+- Escudo institucional “escudo.jpeg”  
+- Diseño modular `styles.css`  
+- Tipografía accesible y estructura clínica secuencial ES/EN  
+
+Todo el contenido es **100% estático**, compatible con navegadores móviles (iPhone/iPad) y GitHub Pages.
 
 ---
 
-© Gobierno de España · Ministerio de Sanidad · Sistema GOBES-eIDAS  
+## 📂 Archivos incluidos
+- `index.html` — Documento HTML completo (Página 1 + Página 2)  
+- `styles.css` — Hoja de estilo GOBES•eIDAS  
+- `README.md` — Este documento  
+- `escudo.jpeg` — Escudo institucional  
+- `eidas.png` — Icono miniatura eIDAS (transparente)  
+- `loader.gif` — Animación de carga  
+
+---
+
+## ⚖ Declaración jurídica
+Este anexo está destinado exclusivamente a **interpretación técnica por profesionales sanitarios**.  
+No realiza firma electrónica, no certifica identidad, no actúa como acta médica autenticada.  
+La lectura y uso requieren contexto clínico especializado.
+
+© Sistema de presentación **GOBES•eIDAS** — Compatible con estándares europeos.
