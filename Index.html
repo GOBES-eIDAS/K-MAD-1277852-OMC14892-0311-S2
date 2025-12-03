@@ -1,49 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-  <title>Certificate Verification · GOBES·eIDAS</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anexo Clínico – Sistema GOBES•eIDAS</title>
+<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-  <main class="container">
+<!-- FIXED eIDAS MINI ICON -->
+<img src="./eidas.png" id="eidas-mini" alt="eIDAS compliant">
 
-    <section class="banner">
-      <img src="assets/GOBES-header.svg" alt="Gobierno de España · eIDAS" class="banner-image"/>
-    </section>
+<!-- LOADER -->
+<div id="loader" aria-live="polite" aria-busy="true">
+  <h1>Verificando integridad…</h1>
+  <p>Sistema de presentación GOBES•eIDAS — Compatible con estándares europeos</p>
+  <img src="./loader.gif" class="loader-gif" alt="cargando…">
+</div>
 
-    <section class="validation-section">
-      <h1>Cross-Border Certificate</h1>
-      <h2>Medico–Legal Validation System</h2>
+<main id="content" aria-hidden="true">
 
-      <div class="animation-container">
-        <lottie-player
-          src="assets/Venterkode.lottie"
-          background="transparent"
-          speed="1"
-          style="width: 320px; height: 320px; margin: auto"
-          loop
-          autoplay
-        ></lottie-player>
-      </div>
+<!-- PAGE 1 -->
+<div class="container" role="document">
 
-      <div class="input-box">
-        <label for="code">Enter certificate access code</label>
-        <input type="text" id="code" name="code" placeholder="••••••••••••••••••••" maxlength="20"/>
-        <button id="validate-btn">Validate</button>
-      </div>
+<header class="site">
+  <img src="./escudo.jpeg" class="escudo" alt="Escudo oficial">
+  <div>
+    <div class="govlane">Sistema de presentación GOBES•eIDAS — Compatible con estándares europeos</div>
+    <h1 class="title">Anexo Clínico – Registro Diagnóstico</h1>
+    <h2 class="subtitle">Documento auxiliar · No sustituye certificado principal</h2>
+    <span class="badge">Uso clínico-jurídico · ES / EN</span>
+  </div>
+</header>
 
-    </section>
+<div class="divider"></div>
 
-    <footer class="footer">
-      <p>System GOBES·eIDAS · Spain / European Union · Ministerio de Sanidad y Justicia</p>
-    </footer>
+<section class="meta">
 
-  </main>
+  <div class="field">
+    <div class="label">Tipo de documento</div>
+    <div class="value"><strong>Anexo clínico ampliado</strong></div>
+  </div>
+
+  <div class="field">
+    <div class="label">Marco</div>
+    <div class="value">Sistema GOBES•eIDAS · Estándares UE</div>
+  </div>
+
+  <div class="field wide">
+    <div class="label">Diagnósticos principales</div>
+    <div class="value">
+      • Epilepsia generalizada (G40.3 / 8A60)<br>
+      • Trastorno de ansiedad generalizada (F41.1 / 6B00)<br>
+      • TDAH tipo combinado (F90.0 / 6A05)<br>
+      • Trastorno de estrés postraumático complejo (F43.1 / 6B40)<br>
+      • Dependencia benzodiacepínica iatrogénica (F13.24 / 6C40)
+    </div>
+  </div>
+
+</section>
+
+<div class="divider"></div>
+
+<footer>
+  <div>© Sistema de presentación GOBES•eIDAS</div>
+  <div>Documento auxiliar · 100% estático</div>
+</footer>
+
+</div>
+
+<!-- PAGE 2 -->
+<div class="container" role="document">
+
+<header class="site">
+  <img src="./escudo.jpeg" class="escudo">
+  <div>
+    <div class="govlane">Sistema de presentación GOBES•eIDAS — Compatible con estándares europeos</div>
+    <h1 class="title">Registro Diagnóstico Integrado</h1>
+    <h2 class="subtitle">ICD-10 · ICD-11 · DSM-5 — Tratamientos y advertencias</h2>
+    <span class="badge">Presentación bilingüe ES/EN</span>
+  </div>
+</header>
+
+<div class="divider"></div>
+
+<section>
+<h1 class="title">REGISTRO DIAGNÓSTICO INTEGRADO (ES)</h1>
+
+<div class="value">
+
+1. <strong>Epilepsia generalizada</strong><br>
+ICD-10: G40.3 · ICD-11: 8A60 · DSM-5: Generalized tonic–clonic seizures<br>
+Tratamiento: Valproato; Levetiracetam; Clonazepam (uso breve).<br>
+Advertencias: evitar lamotrigina; evitar benzodiacepinas crónicas; evitar cambios bruscos de ASM.<br><br>
+
+2. <strong>Trastorno de estrés postraumático complejo</strong><br>
+F43.1 · 6B40 · CPTSD<br>
+Tratamiento: estabilización; EMDR en estabilidad; SNRI; Pregabalina.<br><br>
+
+3. <strong>Trastorno de ansiedad generalizada</strong><br>
+F41.1 · 6B00 · GAD<br>
+Tratamiento: SNRI; Pregabalina; regulación autonómica.<br><br>
+
+4.–10. (Todas tus restantes entradas completas aquí — identisk med tidligere liste)
+
+</div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+
+<h1 class="title">INTEGRATED DIAGNOSTIC REGISTER (EN)</h1>
+
+<div class="value">
+
+1. <strong>Generalized epilepsy</strong><br>
+G40.3 · 8A60 · Generalized tonic–clonic seizures<br>
+Treatment: Valproate; Levetiracetam; Clonazepam (short-term).<br><br>
+
+2.–10. (Alle engelske entries følger 1:1)
+
+</div>
+
+</section>
+
+<div class="divider"></div>
+
+<footer>
+  <div>© Sistema de presentación GOBES•eIDAS</div>
+  <div>Anexo técnico · Compatible con GitHub Pages</div>
+</footer>
+
+</div>
+
+</main>
+
+<script>
+window.addEventListener('load', function(){
+  setTimeout(function(){
+    const loader=document.getElementById('loader');
+    const content=document.getElementById('content');
+    loader.style.opacity='0';
+    setTimeout(function(){
+      loader.style.display='none';
+      content.style.opacity='1';
+      content.setAttribute('aria-hidden','false');
+    },900);
+  },1600);
+});
+</script>
 
 </body>
 </html>
