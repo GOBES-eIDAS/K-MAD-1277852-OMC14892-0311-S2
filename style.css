@@ -7,15 +7,29 @@
   --negro:#111;
 }
 
+/* RESET */
 *{box-sizing:border-box;}
 html,body{
-  margin:0;padding:0;
+  margin:0;
+  padding:0;
   background:var(--azul-osc);
   color:var(--blanco);
   font-family:"Segoe UI",system-ui,-apple-system,Arial,Helvetica,sans-serif;
 }
 
-/* Loader */
+/* FIXED EIDAS MINI ICON */
+#eidas-mini{
+  position:fixed;
+  top:14px;
+  right:14px;
+  width:50px;
+  height:auto;
+  opacity:0.95;
+  z-index:99999;
+  pointer-events:none;
+}
+
+/* LOADER */
 #loader{
   position:fixed;inset:0;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
@@ -23,41 +37,32 @@ html,body{
   z-index:9999;
   transition:opacity 900ms ease;
 }
-.escudo{
-  width:112px;height:112px;margin-bottom:18px;
-  object-fit:contain;
-  filter: drop-shadow(0 0 10px rgba(212,175,55,0.5));
+#loader img.loader-gif{
+  width:120px;height:auto;margin-top:14px;object-fit:contain;
 }
 #loader h1{
-  margin:0 0 6px;
-  font-weight:600;letter-spacing:.3px;
-  font-size:1.15rem;color:var(--blanco);
+  margin:0 0 6px;font-weight:600;letter-spacing:.3px;font-size:1.15rem;
 }
 #loader p{
   margin:0;color:#d7dbea;opacity:.9;
 }
-#loader .ring{
-  margin-top:16px;width:44px;height:44px;border-radius:50%;
-  border:3px solid var(--oro);border-top-color:transparent;
-  animation:spin 1.2s linear infinite;
-}
-
-@keyframes spin{to{transform:rotate(360deg);}}
 
 /* MAIN */
 main{
   opacity:0;
   transition:opacity 900ms ease;
   background:linear-gradient(180deg,var(--azul) 0%,var(--azul-osc) 100%);
-  min-height:100vh;padding:40px 20px;
+  min-height:100vh;
+  padding:40px 20px;
 }
 
-/* CONTAINERS */
+/* CONTAINER */
 .container{
   max-width:980px;margin:0 auto;
   background:rgba(255,255,255,0.03);
   border:1px solid rgba(212,175,55,0.35);
-  border-radius:12px;padding:28px 24px;
+  border-radius:12px;
+  padding:28px 24px;
 }
 
 /* HEADER */
@@ -65,7 +70,7 @@ header.site{
   display:flex;align-items:center;gap:14px;margin-bottom:10px;
 }
 header.site .escudo{
-  width:72px;height:72px;margin:0;object-fit:contain;
+  width:72px;height:72px;object-fit:contain;
 }
 
 .govlane{
@@ -92,7 +97,7 @@ header.site .escudo{
   margin:16px 0 24px;
 }
 
-/* METADATA GRID */
+/* META GRID */
 .meta{
   display:grid;grid-template-columns:1fr 1fr;gap:14px;
 }
@@ -105,14 +110,13 @@ header.site .escudo{
   font-size:.78rem;color:#d7dbea;letter-spacing:.5px;text-transform:uppercase;
 }
 .value{
-  margin-top:4px;font-size:1.02rem;color:#f7f8fb;line-height:1.55;
+  margin-top:4px;font-size:1.02rem;color:#f7f8fb;line-height:1.6;
 }
 .wide{grid-column:1/-1;}
 
 /* FOOTER */
 footer{
-  margin-top:24px;
-  color:#d7dbea;font-size:.9rem;
+  margin-top:24px;color:#d7dbea;font-size:.9rem;
   display:flex;justify-content:space-between;flex-wrap:wrap;
 }
 
