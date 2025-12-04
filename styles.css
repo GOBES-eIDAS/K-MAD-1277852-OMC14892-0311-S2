@@ -1,0 +1,11 @@
+
+body {background:#0b1d3a;color:#fff;font-family:Arial;margin:0;padding:0;}
+#loader {position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+background:radial-gradient(1200px 800px at 50% 40%,#113166 0%,#08162b 60%);transition:opacity .9s;}
+.loader-gif {width:120px;}
+#content {opacity:0;transition:opacity .9s;padding:40px;}
+footer {position:fixed;bottom:10px;width:100%;text-align:center;color:#fff;display:flex;
+justify-content:center;gap:12px;align-items:center;font-size:.9rem;}
+.online-indicator {width:14px;height:14px;background-color:#00d35c;border-radius:50%;
+animation:pulse 2.5s infinite ease-in-out;}
+@keyframes pulse {0%{opacity:1;}50%{opacity:.35;}100%{opacity:1;}}
