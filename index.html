@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Plataforma Oficial de Verificación – GOBES•eIDAS (España / Unión Europea)</title>
+<link rel="icon" href="favicon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div id="loader">
+  <h1>Validando integridad del documento…</h1>
+  <img src="loader.gif" class="loader-gif">
+</div>
+
+<main id="content" aria-hidden="true">
+
+  <h1>Plataforma Oficial de Verificación – GOBES•eIDAS</h1>
+  <p class="intro-text">
+    Verificación oficial del estado, integridad y autenticidad del documento médico-legal principal.
+  </p>
+
+  <section class="diagnostic-block">
+    <h2>Resumen Diagnóstico Oficial (ICD-10 · ICD-11 · DSM-5)</h2>
+
+    <ul class="diag-list">
+      <li><strong>Epilepsia generalizada</strong> — G40.3 / 8A60 / DSM-5</li>
+      <li><strong>Trastorno de Estrés Postraumático Complejo (CPTSD)</strong> — F43.1 / 6B40</li>
+      <li><strong>Trastorno de Ansiedad Generalizada (GAD)</strong> — F41.1 / 6B00</li>
+      <li><strong>TDAH Tipo Combinado</strong> — F90.0 / 6A05</li>
+      <li><strong>Disociación estructural por trauma</strong> — DSM-5 spec.</li>
+      <li><strong>Disritmia talamocortical con estados pre-ictales</strong> — rel. 8A60</li>
+      <li><strong>Organización de personalidad basada en trauma</strong> — sin F60.x</li>
+      <li><strong>Dependencia iatrogénica a benzodiacepinas</strong> — F13.24 / 6C40</li>
+      <li><strong>Sensibilización dopaminérgica</strong> — F14.21 / 6C45</li>
+      <li><strong>Alteración de integración autobiográfica</strong> — (6B40 + 8A60)</li>
+    </ul>
+
+    <p class="diag-note">
+      Este conjunto diagnóstico ha sido validado longitudinalmente y forma parte del 
+      Certificado Médico-Legal S2.
+    </p>
+  </section>
+
+  <section class="certificate-block">
+    <h2>Certificado Médico-Legal S2 — Descarga oficial</h2>
+
+    <p>
+      El certificado digital ha sido verificado por el sistema GOBES•eIDAS y se encuentra
+      registrado correctamente. La descarga estará disponible mediante el siguiente enlace oficial:
+    </p>
+
+    <button class="download-btn" id="downloadButton" disabled>
+      Descargar Certificado S2 (PDF)
+    </button>
+
+    <p class="status-note">
+      Disponible próximamente · Firma eIDAS en proceso de sincronización
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <div>Online real-time connected</div>
+  <div class="online-indicator"></div>
+  <div>© Sistema de GOBES•eIDAS</div>
+</footer>
+
+<script>
+window.addEventListener('load', function(){
+  setTimeout(function(){
+    const loader = document.getElementById('loader');
+    const content = document.getElementById('content');
+    loader.style.opacity = '0';
+    setTimeout(function(){
+      loader.style.display = 'none';
+      content.style.opacity = '1';
+      content.setAttribute('aria-hidden','false');
+    }, 900);
+  }, 11000);
+});
+</script>
+
+</body>
+</html>
