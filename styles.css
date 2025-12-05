@@ -1,0 +1,5 @@
+
+body {background:#091428;color:white;font-family:Arial;padding:40px;}
+h1,h2{color:#d9b65a;}
+section{margin-bottom:30px;padding:20px;background:rgba(255,255,255,0.05);border-radius:8px;}
+button{padding:12px 20px;border:1px solid #d9b65a;background:transparent;color:#d9b65a;opacity:0.4;}
